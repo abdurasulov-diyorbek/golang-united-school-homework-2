@@ -13,7 +13,7 @@ const SidesSquare = 4
 const SidesTriangle = 3
 const SidesCircle = 0
 
-func CalcSquare(sideLen float64, sidesNum #yourTypeNameHere#) float64 {
+func CalcSquare(sideLen float64, sidesNum int64) float64 {
   if sidesNum == SidesSquare {
 		return sideLen * sideLen
 	} else if sidesNum == SidesTriangle {
