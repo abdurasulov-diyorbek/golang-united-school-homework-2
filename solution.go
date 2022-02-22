@@ -13,7 +13,7 @@ const SidesTriangle = 3
 const SidesCircle = 0
 
 func CalcSquare(sideLen float64, sidesNum int64) float64 {
-  if sidesNum == SidesSquare {
+	if sidesNum == SidesSquare {
 		return sideLen * sideLen
 	} else if sidesNum == SidesTriangle {
 		return (math.Sqrt(3) / 4) * sideLen * sideLen
