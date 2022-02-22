@@ -8,7 +8,6 @@ import	"math"
 // CalcSquare(10.0, SidesSquare)
 // CalcSquare(10.0, SidesCircle)
 
-const pi = math.Pi
 const SidesSquare = 4
 const SidesTriangle = 3
 const SidesCircle = 0
@@ -19,7 +18,7 @@ func CalcSquare(sideLen float64, sidesNum int64) float64 {
 	} else if sidesNum == SidesTriangle {
 		return (math.Sqrt(3) / 4) * sideLen * sideLen
 	} else if sideLen == SidesCircle {
-		return pi * sideLen * sideLen
+		return math.Pi * sideLen * sideLen
 	} else {
 		return 0
 	}
