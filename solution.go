@@ -13,13 +13,14 @@ const SidesTriangle = 3
 const SidesCircle = 0
 
 func CalcSquare(sideLen float64, sidesNum int64) float64 {
-	if sidesNum == SidesSquare {
-		return sideLen * sideLen
-	} else if sidesNum == SidesTriangle {
-		return (math.Sqrt(3) / 4) * sideLen * sideLen
-	} else if sideLen == SidesCircle {
-		return math.Pi * sideLen * sideLen
-	} else {
-		return 0
+	switch sidesNum {
+		case SidesCircle:
+	       		return math.Pi * sideLen * sideLen
+		case SidesSquare:
+			return sideLen * sideLen
+		case SidesTriangle:
+			return math.Sqrt(3) * sideLen * sideLen / 4
+		default:
+			return 0
 	}
 }
